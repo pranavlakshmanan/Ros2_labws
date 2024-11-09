@@ -1,0 +1,387 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot">
+  <link name="base_footprint"/>
+  <joint name="base_footprint_to_base" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0072825 1.1052E-17 0.48483"
+        rpy="0 0 0" />
+      <mass
+        value="29.964" />
+      <inertia
+        ixx="126.82"
+        ixy="-0.00071241"
+        ixz="0.02702"
+        iyy="312.73"
+        iyz="4.1106E-16"
+        izz="376.07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="base">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="-3.3307E-16 -0.009389 -5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.7" />
+      <inertia
+        ixx="0.51815"
+        ixy="5.6207E-14"
+        ixz="-1.2248E-13"
+        iyy="0.58716"
+        iyz="3.2748E-14"
+        izz="0.51815" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="wheel">
+        <color
+          rgba="1 0.55 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.53094 -0.71525 0.29"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="rear_right_wheel">
+    <inertial>
+      <origin
+        xyz="-1.1102E-15 -0.009389 7.7716E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.7" />
+      <inertia
+        ixx="0.51815"
+        ixy="-1.2047E-14"
+        ixz="1.2495E-13"
+        iyy="0.58716"
+        iyz="5.1548E-14"
+        izz="0.51815" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/rear_right_wheel.STL" />
+      </geometry>
+      <material
+        name="wheel">
+        <color
+          rgba="1 0.55 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/rear_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.53573 -0.71525 0.29"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="rear_left_wheel">
+    <inertial>
+      <origin
+        xyz="2.2204E-16 0.009389 -5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.7" />
+      <inertia
+        ixx="0.51815"
+        ixy="5.6203E-14"
+        ixz="1.2248E-13"
+        iyy="0.58716"
+        iyz="-3.2748E-14"
+        izz="0.51815" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/rear_left_wheel.STL" />
+      </geometry>
+      <material
+        name="wheel">
+        <color
+          rgba="1 0.55 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/rear_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.53573 0.71525 0.29"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="7.7716E-16 0.009389 6.1062E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.7" />
+      <inertia
+        ixx="0.51815"
+        ixy="-1.2057E-14"
+        ixz="-1.2498E-13"
+        iyy="0.58716"
+        iyz="-5.1548E-14"
+        izz="0.51815" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="wheel">
+        <color
+          rgba="1 0.55 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.53094 0.71525 0.29"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="racket">
+    <inertial>
+      <origin
+        xyz="1.2757 -2.779E-16 -1.1102E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0001" />
+      <inertia
+        ixx="87.853"
+        ixy="-3.074E-14"
+        ixz="-1.8981E-15"
+        iyy="29.951"
+        iyz="3.0154E-16"
+        izz="95.639" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/racket.STL" />
+      </geometry>
+      <material
+        name="racket">
+        <color
+          rgba="1 0.55 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find project)/meshes/racket.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="racket_joint"
+    type="prismatic">
+    <origin
+      xyz="0.13313 0 0.49"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="racket" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.4067"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <gazebo reference="base_link">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="front_left_wheel">
+    <material>Gazebo/Orange</material>
+    <selfCollide>true</selfCollide>
+    <gravity>true</gravity>
+  </gazebo>
+  <gazebo reference="rear_left_wheel">
+    <material>Gazebo/Orange</material>
+    <selfCollide>true</selfCollide>
+    <gravity>true</gravity>
+  </gazebo>
+  <gazebo reference="front_right_wheel">
+    <material>Gazebo/Orange</material>
+    <selfCollide>true</selfCollide>
+    <gravity>true</gravity>
+  </gazebo>
+  <gazebo reference="rear_right_wheel">
+    <material>Gazebo/Orange</material>
+    <selfCollide>true</selfCollide>
+    <gravity>true</gravity>
+  </gazebo>
+  <gazebo reference="racket">
+    <material>Gazebo/Orange</material>
+    <selfCollide>true</selfCollide>
+    <gravity>true</gravity>
+  </gazebo> 
+  <!-- gazebo_mecanum plugin -->
+  <gazebo>
+    <plugin name="mecanum_drive" filename="libgazebo_mecanum_drive.so">
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+      <LeftRear>rear_left_wheel_joint</LeftRear>
+      <LeftFront>front_left_wheel_joint</LeftFront>
+      <RightFront>front_right_wheel_joint</RightFront>
+      <RightRear>rear_right_wheel_joint</RightRear>
+      <odometryRate>30</odometryRate>      
+      <publishWheelTF>false</publishWheelTF>
+      <publishOdomTF>false</publishOdomTF>
+      <WheelTorque>30</WheelTorque>
+      <WheelSeparationW>1.06067</WheelSeparationW>
+      <WheelSeparationL>1.06667</WheelSeparationL>
+      <wheelAccel>30</wheelAccel>
+      <wheelDiameter>0.59918</wheelDiameter>
+      <publishOdom>true</publishOdom>
+      <isRollerModel>true</isRollerModel>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="robot_joint_state" filename="libgazebo_ros_joint_state_publisher.so">
+      <ros>
+        <remapping>joint_states:=joint_states</remapping>
+      </ros>
+      <update_rate>30</update_rate>
+      <joint_name>rear_left_wheel_joint</joint_name>
+      <joint_name>front_left_wheel_joint</joint_name>
+      <joint_name>front_left_wheel_joint</joint_name>
+      <joint_name>rear_right_wheel_joint</joint_name>
+    </plugin>
+  </gazebo>
+</robot>

@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="ARENA6">
+
+  <link name="ground">
+    <inertial>
+      <origin xyz="-8.7764E-16 6.5248E-17 0.25" rpy="0 0 0" />
+      <mass value="153830" />
+      <inertia ixx="5846000" ixy="-1.9114E-09" ixz="2.517E-09" iyy="38829000" iyz="4.795E-10" izz="44668000" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find project)/meshes/ground.STL" />
+      </geometry>
+      <material name="Mud">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+        <texture filename="file://$(find project)/textures/mud.png" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find project)/meshes/ground.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="grass">
+    <inertial>
+      <origin xyz="2.9154E-16 1.8578E-15 0.24971" rpy="0 0 0" />
+      <mass value="239430" />
+      <inertia ixx="5608800" ixy="3.688E-10" ixz="1.5988E-09" iyy="15582000" iyz="2.5726E-10" izz="21181000" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find project)/meshes/grass.STL" />
+      </geometry>
+      <material name="Grass">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+        <texture filename="file://$(find project)/textures/rb_52275.png" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find project)/meshes/grass.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="grass_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="ground" />
+    <child link="grass" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="line">
+    <inertial>
+      <origin xyz="1.1102E-16 4.8097E-15 0.45" rpy="0 0 0" />
+      <mass value="342" />
+      <inertia ixx="8334" ixy="-5.8601E-15" ixz="-7.4015E-18" iyy="1.425" iyz="0" izz="8334.8" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find project)/meshes/line.STL" />
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find project)/meshes/line.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="line_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="grass" />
+    <child link="line" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="red_barrier">
+    <inertial>
+      <origin xyz="-10.827 -0.010039 1.4993" rpy="0 0 0" />
+      <mass value="11185" />
+      <inertia ixx="427170" ixy="-474.08" ixz="20601" iyy="234530" iyz="118.77" izz="646270" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find project)/meshes/red_barrier.STL" />
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find project)/meshes/red_barrier.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="red_barrier_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="ground" />
+    <child link="red_barrier" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="blue_barrier">
+    <inertial>
+      <origin xyz="10.827 -0.01933 1.4993" rpy="0 0 0" />
+      <mass value="11185" />
+      <inertia ixx="427170" ixy="-474.08" ixz="-20601" iyy="234530" iyz="-118.77" izz="646270" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find project)/meshes/blue_barrier.STL" />
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find project)/meshes/blue_barrier.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="blue_barrier_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="ground" />
+    <child link="blue_barrier" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <!-- Add material properties for Gazebo -->
+  <gazebo reference="ground">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+  <gazebo reference="grass">
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+  <gazebo reference="line">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+  <gazebo reference="red_barrier">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <gazebo reference="blue_barrier">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+  <physics type="ode">
+    <real_time_update_rate>1000</real_time_update_rate>
+    <max_step_size>0.001</max_step_size>
+    <real_time_factor>1</real_time_factor>
+  </physics>
+
+</robot>

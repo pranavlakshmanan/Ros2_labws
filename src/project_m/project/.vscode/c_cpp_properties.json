@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/humble/include/**",
+        "/home/meet/ros2_ws/src/kobuki_ros/kobuki_auto_docking/include/**",
+        "/home/meet/ros2_ws/src/kobuki_ros/kobuki_bumper2pc/include/**",
+        "/home/meet/ros2_ws/src/kobuki_ros/kobuki_keyop/include/**",
+        "/home/meet/ros2_ws/src/kobuki_ros/kobuki_node/include/**",
+        "/home/meet/ros2_ws/src/kobuki_ros/kobuki_random_walker/include/**",
+        "/home/meet/ros2_ws/src/kobuki_ros/kobuki_safety_controller/include/**",
+        "/home/meet/ros2_ws/src/turtlebot3/turtlebot3_node/include/**",
+        "/home/meet/ros2_ws/src/turtlebot3_simulations/turtlebot3_fake_node/include/**",
+        "/home/meet/ros2_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

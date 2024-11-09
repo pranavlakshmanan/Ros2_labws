@@ -1,0 +1,15 @@
+mecanum_controller:
+  ros__parameters:
+    wheel_radius: 0.075  # meters
+    wheel_separation_width: 0.51834  # distance between left and right wheels
+    wheel_separation_length: 1.06667  # distance between front and back wheels
+    max_wheel_velocity: 10.0  # rad/s
+
+    # Topic mappings
+    robot_1:
+      cmd_vel_topic: "/robot_1/cmd_vel"
+      wheel_vel_topic: "/robot_1/forward_velocity_controller/commands"
+    
+    robot_2:
+      cmd_vel_topic: "/robot_2/cmd_vel"
+      wheel_vel_topic: "/robot_2/forward_velocity_controller/commands"
